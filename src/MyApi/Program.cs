@@ -33,6 +33,18 @@ app.MapGet("/weatherforecast", () =>
     })
     .WithName("GetWeatherForecast");
 
+app.MapGet("/fibonacci/{n:int}", (int n) =>
+{
+    long FibonacciCalc(int x)
+    {
+        if (x <= 1) return x;
+        return FibonacciCalc(x - 1) + FibonacciCalc(x - 2);
+    }
+
+    long result = FibonacciCalc(n);
+    return Results.Ok(new { n, result });
+}).WithName("GetFibonacci");
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
