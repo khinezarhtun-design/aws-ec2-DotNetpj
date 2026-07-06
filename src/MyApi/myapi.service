@@ -2,10 +2,10 @@
 Description=My ASP.NET Web API
 
 [Service]
-WorkingDirectory=/home/ec2-user/myapi
-ExecStart=/home/ec2-user/myapi/MyApi
+WorkingDirectory=/home/ubuntu/myapi
+ExecStart=/home/ubuntu/myapi/MyApi
 Restart=always
-User=ec2-user
+User=ubuntu
 Environment=DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=1
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=ASPNETCORE_URLS=http://0.0.0.0:5000
