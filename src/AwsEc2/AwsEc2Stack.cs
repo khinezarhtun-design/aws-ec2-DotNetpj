@@ -52,7 +52,7 @@ public class AwsEc2Stack : Stack
 
         // Create Launch Template
         var machineImage = MachineImage.LatestAmazonLinux2023();
-        var keyPair = KeyPair.FromKeyPairName(this, "key-0a498c763ef8ab954", "my-key-pair");
+        var keyPair = KeyPair.FromKeyPairName(this, "key-02aa0add53f996811", "lumina-keypair");
         
         // UserData script to install and configure CloudWatch Agent
         // CloudWatch Agent configuration as a readable JSON string
